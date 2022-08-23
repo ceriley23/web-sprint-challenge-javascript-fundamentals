@@ -15,7 +15,7 @@ function myFunction() {
 }
 //myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
+//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: internal is defined outside of nestedFunction, and since functions can reach outside of their own scope to grab a variable, there is no closure that blocks nestedFunction from using internal
 
 
 
@@ -30,11 +30,11 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  const total = (number*(number + 1)) / 2;
+  return total
   }
- 
+ console.log('task2:', summation(6))
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -60,10 +60,14 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(element => {displayNames.push(`name: ${element.animal_name}, scientific: ${element.scientific_name}`)
+      })
+    return displayNames
+    }
+ 
+  console.log('task3:', animalNames(zooAnimals))
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
